@@ -2,8 +2,12 @@ var mongoose = require('mongoose');
 var Schema = mongoose.Schema;
 
 var UserSchema = new Schema({
-  name: String,
-  password: String,
+  name: {
+    type: String,
+    required: 'Enter Your Name'
+   },
+
+  password: String, // check
   email: String
 });
 
